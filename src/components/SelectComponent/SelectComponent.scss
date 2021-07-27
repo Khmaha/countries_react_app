@@ -1,0 +1,18 @@
+.list-region{
+    @media screen and (max-width: 768px){
+        width: 100%;  
+    }
+    select{
+        padding: 1em;
+        border: none;
+        border-radius: 2px;
+        background-color: var(--secondary-color);
+        color: var(--title-color);
+        cursor: pointer;
+        width: 100%;
+    
+        &:focus{
+            outline: none!important;
+        }
+    }
+}

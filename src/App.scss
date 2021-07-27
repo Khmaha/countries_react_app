@@ -1,0 +1,22 @@
+.App {
+  height: 100%;
+  width: 100%;
+  background: var(--primary-color);
+  overflow-x: hidden;
+  &.light-mode{
+    --primary-color: #f3f3f3;
+    --secondary-color: #fff;
+    --title-color:rgb(20, 20, 20);
+    --border-card-color:#dadada;
+    --swicther-color:rgb(210 74 74);
+    --shadow-secondary-color: rgb(236, 236, 236);
+  }
+  &.dark-mode{
+    --primary-color: #202e37;
+    --secondary-color: #293743;
+    --title-color:#fff;
+    --border-card-color:#22313c;
+    --swicther-color:rgb(210 74 74);
+    --shadow-secondary-color: #223441;
+  }
+}

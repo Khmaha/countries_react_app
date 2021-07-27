@@ -1,0 +1,15 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 1em 4em;
+    @media screen and (max-width: 992px){
+        padding: 1em 2em;
+    }
+    @media screen and (max-width: 768px){
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1em;
+    }
+}
