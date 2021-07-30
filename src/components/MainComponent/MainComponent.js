@@ -14,6 +14,8 @@ const MainComponent = ({ countriesList, handleFilterCountryListByRegion, handleF
             <CardListComponent
                 countriesList={countriesList}
                 clickCountry={clickCountry}
+                filtredKeyword={filtredKeyword}
+                filtredRegion={filtredRegion}
             ></CardListComponent>
         </div>
     )

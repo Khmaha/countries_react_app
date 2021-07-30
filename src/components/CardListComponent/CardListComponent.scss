@@ -78,4 +78,21 @@
             font-family: 'Nunito Sans';
         }
     }   
+    &.isEmpty{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    &__no-videos{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        font-weight: 600;
+        font-size: 18px;
+        font-family: 'Nunito Sans';
+        color: var(--title-color);
+    }
+    
 }

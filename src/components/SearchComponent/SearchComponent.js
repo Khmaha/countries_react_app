@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import './SearchComponent.scss'
 const SearchComponent = ({ filterCountryListByName, filtredKeyword }) => {
     useEffect(() => {
-        console.log("filtredKeyword", filtredKeyword)
         if (filtredKeyword) {
             document.getElementById("search").value = filtredKeyword
         }
@@ -13,7 +12,9 @@ const SearchComponent = ({ filterCountryListByName, filtredKeyword }) => {
                 id="search"
                 className="input-search"
                 placeholder="Search for a country.."
-                onKeyUp={(ev) => filterCountryListByName(ev.target.value)} ></input>
+                onChange={(ev) => filterCountryListByName(ev.target.value)}
+
+            ></input>
             <i className="icon-search "></i>
         </div>
     )

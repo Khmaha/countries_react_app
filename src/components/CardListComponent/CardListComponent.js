@@ -2,10 +2,10 @@ import React from 'react';
 import './CardListComponent.scss';
 import { Link } from 'react-router-dom';
 import eventHub from '../../eventHub'
-const CardListComponent = ({ countriesList, clickCountry }) => {
-
+const CardListComponent = ({ countriesList, clickCountry, filtredKeyword, filtredRegion }) => {
+    const isEmpty = (filtredKeyword || filtredRegion) && !countriesList.length;
     return (
-        <div className="card-list">
+        <div className={"card-list " + (isEmpty ? ' isEmpty' : '')}>
             {countriesList && countriesList.length > 0 ? countriesList.map((card, index) => {
                 return (
                     <Link className="card-item" key={index} to={"/countryview"} onClick={() => clickCountry(card.name)}>
@@ -18,7 +18,7 @@ const CardListComponent = ({ countriesList, clickCountry }) => {
                         </div>
                     </Link>
                 )
-            }) : null}
+            }) : isEmpty && <span className="card-list__no-videos">No Videos</span>}
         </div>
     )
 }

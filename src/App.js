@@ -94,11 +94,11 @@ function App() {
           <Route exact path="/">
             <MainComponent
               countriesList={(filtredCountryList && filtredCountryList.length) || (filtredRegion || filtredKeyword) ? filtredCountryList : countriesList}
-              handleFilterCountryListByName={handleFilterCountryListByName}
-              handleFilterCountryListByRegion={handleFilterCountryListByRegion}
+              handleFilterCountryListByName={(e) => handleFilterCountryListByName(e)}
+              handleFilterCountryListByRegion={(e) => handleFilterCountryListByRegion(e)}
               filtredRegion={filtredRegion}
               filtredKeyword={filtredKeyword}
-              clickCountry={clickCountry}
+              clickCountry={(e) => clickCountry(e)}
             ></MainComponent>
           </Route>
           <Route exact path="/countryview">
