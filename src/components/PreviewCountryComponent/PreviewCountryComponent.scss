@@ -2,12 +2,18 @@
     display: flex;
     flex-direction: column;
     padding: 0 4em ;
+    height: calc(100% - 100px);
     @media screen and (max-width: 992px){
         padding: 0 2em;
     }
     @media screen and (max-width: 768px){
         padding: 0 1em;
-    }
+        //new 
+        height: 100%;
+    } 
+    // @media screen and (max-width: 598px){
+    //     height: 100%;
+    // }
     .link-back{
         width: 100px;
         height: 30px;
@@ -33,6 +39,10 @@
             .icon-arrow{
                 padding-right: 7px;
             }
+            //new
+            @media screen and (max-width: 768px){
+                padding:1em;
+            } 
         }
    }
     .country-card{
@@ -42,19 +52,25 @@
        color: var(--title-color);
        display: flex;
        flex-direction: row;
-    //    align-items: center;
-       @media screen and (max-width: 598px){
+       justify-content: center;
+       align-items: center;
+
+    //new
+       @media screen and (max-width: 768px){//598px
         flex-direction: column;
+        justify-content: flex-start;
        }
        &-list{
         display: flex;
         flex-direction: row;
         width: 70%;
         justify-content: space-between;
+        padding: 1em 0;
         @media screen and (max-width: 992px){
             width: 100%;
        }
-            @media screen and (max-width: 598px){
+       //new
+            @media screen and (max-width: 768px){//598px
                 flex-direction: column;
                 width: 100%;
                 justify-content: flex-start;
@@ -64,15 +80,17 @@
                padding-right: 10px;
            }
        }
+      
            &-image{
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 1em 1em 1em 0;
-            height: 100%;
-            width: 70%;
-            @media screen and (max-width: 598px){
-            margin : 0;
+            // margin: 1em 1em 1em 0;
+            height: auto;
+            width:100%;
+           //new
+            @media screen and (max-width: 768px){//598px
+            // margin : 0;
             width: 100%;
             }
            }
@@ -81,6 +99,13 @@
             width: 100%;
             object-fit: cover;
             }
+            &-name{
+                margin-bottom: 0;
+                margin-top: 0.5em;
+                font-weight: 600;
+                // font-size: 16px ;
+                font-family: 'Nunito Sans';
+               }
             &-description{
                 display: flex;
                 align-items: flex-start;
@@ -89,13 +114,16 @@
                 width: 100%;
                 justify-content: center;
                 padding: 0 2em;
-                @media screen and (max-width: 598px){
-                    padding-left: 0;
+               //new
+                @media screen and (max-width: 768px){//598px
+                    padding-left: 2em;
                 }
             }
             &-title{
                 font-weight: 400;
-                font-size: 14px;
+                font-size: 16px ;
+                font-family: 'Nunito Sans';
+
                 &--border{
                     padding-right: 10px;
                 }
@@ -110,8 +138,10 @@
                }
             }
             &-value{
-                font-weight: 400;
-                font-size: 12px;
+                font-weight: 300;
+                font-size:16px ;
+                font-family: 'Nunito Sans';
+
                 &--border{
                     height: 25px;
                     min-width: auto;
@@ -123,10 +153,12 @@
                     border: 1px solid var(--border-card-color);
                     margin-right: 10px;
                     margin-bottom: 10px;
-                    font-size: 12px;
-                    font-weight: 400;
+                    font-size:  16px;
+                    font-weight: 300;
                     padding: 0px 8px;
                     cursor: pointer;
+                    font-family: 'Nunito Sans';
+
                 }
             }
     }
